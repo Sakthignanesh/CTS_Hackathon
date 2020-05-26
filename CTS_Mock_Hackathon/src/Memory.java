@@ -19,7 +19,7 @@ public class Memory {
         {
             String readLine;
             double temp;
-            //String str=readLine;
+           
             int line = 0;
             int i=0;
             double sum=0.0;
@@ -27,16 +27,16 @@ public class Memory {
             while ((readLine = bf.readLine()) != null) 
             {
                 if (line % 2 != 0) {
-                	//System.out.println(readLine);
+                	
                 	String str=readLine;
                 	str=str.replaceAll("[^0-9]","");
                     str=str.trim();
-                    //str=str.replaceAll("+", "");
-                    //System.out.println(str);
+                   
+                   
                     temp=Integer.parseInt(str);
-                    //System.out.println(temp/10000);
+                    
                     a[i++]=temp/10000;
-                    //sum=sum+temp;
+                   
                 }
                 line++;
             }
@@ -49,10 +49,10 @@ public class Memory {
             		max=a[j];
             	sum=sum+a[j];
             }
-            //System.out.println(obj1);
+            
             double average=sum/938;
-            //System.out.println("AverageMemory(MB): " + average);
-            //System.out.println("MaximumMemory(MB): " + max);
+            
+            
             DecimalFormat df = new DecimalFormat("#.###");
             df.setRoundingMode(RoundingMode.CEILING);
             obj.put("AverageMemory(MB)", df.format(average));
